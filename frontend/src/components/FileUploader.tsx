@@ -47,22 +47,39 @@ const FileUploader = () => {
     } catch {
       setStatus("error");
       setUploadProgress(0);
+    } finally {
+      setTimeout(() => {
+        setStatus("idle");
+      }, 3000);
     }
   };
 
   return (
-    <div className="flex flex-col h-screen justify-center items-center p-6 border border-gray-300 rounded-md shadow-lg bg-white">
-      <p className="text-gray-700 text-lg mb-4">
-        Upload your resume (.pdf, .docx, .txt)
-      </p>
+    <div className="flex flex-row h-screen justify-center items-center border border-gray-300 rounded-md shadow-lg bg-white gap-8">
+      <div className="w-1/4 h-1/2">
+        <label htmlFor="message" className="block mb-2 text-md font-medium">
+          Job Ad Text
+        </label>
+        <textarea
+          id="message"
+          className="block p-2.5 w-full h-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
+          placeholder="Paste the job post here..."
+        ></textarea>
+      </div>
 
-      <div className="border-2 border-gray-300 rounded-md p-4 mb-4">
-        <input
-          type="file"
-          accept=".pdf,.txt,.doc,.docx"
-          className="font-semibold rounded p-2"
-          onChange={handleFileChange}
-        />
+      <div className="w-1/4 h-1/2">
+        <label htmlFor="upload" className="block mb-2 text-md font-medium">
+          Upload your resume (.pdf, .docx, .txt){" "}
+        </label>
+
+        <div className="flex border-2 border-gray-300 rounded-md h-full justify-center items-center">
+          <input
+            type="file"
+            accept=".pdf,.txt,.doc,.docx"
+            className="font-semibold rounded p-2"
+            onChange={handleFileChange}
+          />
+        </div>
       </div>
 
       {status === "uploading" && (
