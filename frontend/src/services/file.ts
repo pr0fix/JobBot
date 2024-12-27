@@ -1,11 +1,12 @@
 import axios from "axios";
+import { API_URL } from "../utils/constants";
 
 const uploadFile = async (
-  file: FormData,
+  data: FormData,
   setUploadProgress: (progress: number) => void
 ) => {
   try {
-    await axios.post("https://httpbin.org/post", file, {
+    const res = await axios.post(`${API_URL}/api/analyze`, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -16,6 +17,7 @@ const uploadFile = async (
         setUploadProgress(progress);
       },
     });
+    return res.data;
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
