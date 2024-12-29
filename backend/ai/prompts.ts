@@ -11,7 +11,7 @@ const createPrompt = (
 
   Instructions:
   1. Use only the information from the original application. Do not add or invent any new details or skills.
-  2. Keep the writing professional, clear and natural, not overly formal or fancy
+  2. Write in a conversational but professional tone. Avoid jargon, complicated words, and overly formal phrases. For example, use "use" instead of "utilize" and "help" instead of "facilitate".
   3. Keep the overall structure (paragraphs/sections) the same as in the original.
   4. Do not add any technology or experience that is not already in the original.
   5. If important requirements are missing in the original, do not fabricate them.

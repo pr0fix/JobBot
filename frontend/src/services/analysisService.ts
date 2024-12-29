@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_URL } from "../utils/constants";
 
-const uploadFile = async (
+const sendAnalysis = async (
   data: FormData,
   setUploadProgress: (progress: number) => void
 ) => {
@@ -27,4 +27,4 @@ const uploadFile = async (
   }
 };
 
-export default { uploadFile };
+export default { sendAnalysis };

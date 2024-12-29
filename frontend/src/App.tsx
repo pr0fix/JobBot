@@ -1,9 +1,7 @@
-import FileUpload from "./components/FileUploader";
+import LandingPage from "./components/LandingPage";
 
 const App = () => {
-  return(
-    <FileUpload/>
-  )
+  return <LandingPage />;
 };
 
 export default App;

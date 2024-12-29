@@ -1,5 +1,4 @@
-export type AllowedFileTypes =
-  | "application/pdf"
-  | "text/plain"
-  | "application/msword"
-  | "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+export interface FormDataState {
+  jobDescription: string;
+  file: File | null;
+}

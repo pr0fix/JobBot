@@ -2,6 +2,15 @@
 
 A web application that helps users tailor their job applications to match specific job descriptions using AI.
 
+## Table of Contents
+
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Development](#development)
+- [Screenshots](#screenshots)
+
 ## Features
 
 - Upload job applications in multiple formats (PDF, DOCX, TXT)
@@ -15,12 +24,14 @@ A web application that helps users tailor their job applications to match specif
 The project consists of two main parts:
 
 ### Backend
+
 - Node.js/Express server
 - TypeScript
 - WizardLM-2 AI model from Ollama
 - File parsing support for PDF, DOCX, and TXT formats
 
 ### Frontend
+
 - React with TypeScript
 - Vite for build tooling
 - Tailwind CSS for styling
@@ -35,33 +46,39 @@ The project consists of two main parts:
 ## Setup
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/pr0fix/JobBot.git
-    ```
+
+   ```bash
+   git clone https://github.com/pr0fix/JobBot.git
+   ```
 
 2. Install backend dependencies:
-    ```bash
-    cd backend
-    npm install
-    ```
+   ```bash
+   cd backend
+   npm install
+   ```
 3. Install frontend dependencies:
-    ```bash
-    cd frontend
-    npm install
-    ```
+   ```bash
+   cd frontend
+   npm install
+   ```
 
 ## Development
+
 1. Start the backend server:
-    ```bash
-    cd backend
-    npm run dev
-    ```
-The server will run on http://localhost:3000
+   ```bash
+   cd backend
+   npm run dev
+   ```
+   The server will run on http://localhost:3000
 
 2. Start the frontend server:
-    ```bash
-    cd frontend
-    npm run dev
-    ```
-The frontend will be available at http://localhost:5173
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+   The client will be available at http://localhost:5173
+
+## Screenshots
+
+<img src="screenshots/landing-page.PNG" alt="landing-page" height="auto"/>
 
