@@ -26,6 +26,7 @@ const LandingPage = () => {
 
     const submitData = new FormData();
     submitData.append("jobDescription", formData.jobDescription);
+
     if (formData.file) submitData.append("file", formData.file);
 
     try {
