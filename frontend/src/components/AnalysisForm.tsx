@@ -108,7 +108,11 @@ const AnalysisForm = ({ formData, setFormData }: AnalysisFormProps) => {
                 <p className="text-xs text-gray-500">
                   PDF, TXT, DOC, or DOCX (MAX. 10MB)
                 </p>
+                {formData.file && (
+                  <p className="mt-4 text-gray-500">{formData.file.name}</p>
+                )}
               </div>
+
               <input
                 id="upload"
                 type="file"
