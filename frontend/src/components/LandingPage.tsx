@@ -2,21 +2,21 @@ import { useState } from "react";
 import analysisService from "../services/analysisService";
 import AnalysisForm from "./AnalysisForm";
 import UploadStatus from "./UploadStatusIndicator";
-import AnalysisResult from "./AnalysisResult";
 import Header from "./Header";
 import UploadButton from "./UploadButton";
 import { FormDataState } from "../utils/types";
+import { useNavigate } from "react-router";
 
 type UploadStatusType = "idle" | "uploading" | "success" | "error";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormDataState>({
     jobDescription: "",
     file: null,
   });
   const [status, setStatus] = useState<UploadStatusType>("idle");
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [application, setApplication] = useState<string>("");
 
   const handleSubmit = async () => {
     if (!formData.file && !formData.jobDescription) return;
@@ -36,7 +36,9 @@ const LandingPage = () => {
       );
       setStatus("success");
       setUploadProgress(100);
-      setApplication(response.tailoredApplication);
+      navigate("/result", {
+        state: { application: response.tailoredApplication },
+      });
     } catch {
       setStatus("error");
       setUploadProgress(0);
@@ -60,8 +62,6 @@ const LandingPage = () => {
             )}
           <UploadStatus status={status} uploadProgress={uploadProgress} />
         </div>
-
-        {application && <AnalysisResult application={application} />}
       </div>
     </main>
   );

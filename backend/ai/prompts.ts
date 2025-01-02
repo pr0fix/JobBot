@@ -10,17 +10,24 @@ const createPrompt = (
   Original Application: ${applicationText}
 
   Instructions:
-  1. Use only the information from the original application. Do not add or invent any new details or skills.
-  2. Write in a conversational but professional tone. Avoid jargon, complicated words, and overly formal phrases. For example, use "use" instead of "utilize" and "help" instead of "facilitate".
-  3. Keep the overall structure (paragraphs/sections) the same as in the original.
-  4. Do not add any technology or experience that is not already in the original.
-  5. If important requirements are missing in the original, do not fabricate them.
+  1. Use only factual information from the original application
+  2. Match skills and experiences directly to job requirements
+  3. Prioritize most relevant experience first
+  4. Remove any details not relevant to this specific role
+  5. Keep length between 250-400 words
+
+  Tone Guidelines:
+  - Professional but approachable
+  - Action-oriented and specific
+  - Emphasize achievements over responsibilities
+  - Use active voice and strong verbs
 
   Format:
-  - Return only the revised application text.
-  - Preserve the original structure with no extra formatting changes.
+  - No formatting or markdown
+  - Focus on concrete examples and metrics
+  - Use short, clear sentences
 
-  Output only revised text using actual details from the original application.
+   Output the revised application focusing only on the most relevant qualifications for this specific role.
 `;
 
 export default createPrompt;
