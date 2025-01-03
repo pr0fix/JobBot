@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 interface LocationState {
   application: string;
@@ -6,6 +6,7 @@ interface LocationState {
 
 const AnalysisResult = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { application } = location.state as LocationState;
 
   return (
@@ -16,8 +17,11 @@ const AnalysisResult = () => {
         </h2>
         <p className="text-gray-600">{application}</p>
       </div>
-      <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
-        Retry
+      <button
+        onClick={() => navigate("/")}
+        className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out"
+      >
+        Try again
       </button>
     </div>
   );

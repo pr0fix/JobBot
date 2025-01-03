@@ -86,7 +86,15 @@ const AnalysisForm = ({ formData, setFormData }: AnalysisFormProps) => {
               htmlFor="upload"
               className="flex flex-col items-center justify-center w-full h-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-white hover:bg-gray-50 transition duration-200 ease-in-out"
             >
-              <div className="flex flex-col items-center justify-center pt-5 pb-6">
+              <div className="flex flex-col items-center justify-center pt-5 pb-6 h-full w-full relative">
+                <input
+                  id="upload"
+                  type="file"
+                  accept=".pdf,.txt,.doc,.docx"
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                  onChange={handleFileChange}
+                  required
+                />
                 <svg
                   className="w-10 h-10 mb-3 text-gray-400"
                   fill="none"
@@ -112,15 +120,6 @@ const AnalysisForm = ({ formData, setFormData }: AnalysisFormProps) => {
                   <p className="mt-4 text-gray-500">{formData.file.name}</p>
                 )}
               </div>
-
-              <input
-                id="upload"
-                type="file"
-                accept=".pdf,.txt,.doc,.docx"
-                className="hidden"
-                onChange={handleFileChange}
-                required
-              />
             </label>
           </div>
         </div>
