@@ -80,5 +80,8 @@ The project consists of two main parts:
 
 ## Screenshots
 
+#### Landing page
 <img src="screenshots/landing-page.PNG" alt="landing-page" height="auto"/>
 
+#### Analysis form filled with mock-data
+<img src="screenshots/filled-form.PNG" alt="filled-form" height="auto"/>

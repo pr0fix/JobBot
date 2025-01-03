@@ -117,7 +117,11 @@ const AnalysisForm = ({ formData, setFormData }: AnalysisFormProps) => {
                   PDF, TXT, DOC, or DOCX (MAX. 10MB)
                 </p>
                 {formData.file && (
-                  <p className="mt-4 text-gray-500">{formData.file.name}</p>
+                  <div className="mt-4 p-2 border border-gray-300 rounded-lg bg-gray-50">
+                    <p className="text-gray-700 font-medium">
+                      {formData.file.name}
+                    </p>
+                  </div>
                 )}
               </div>
             </label>
