@@ -65,10 +65,12 @@ The project consists of two main parts:
 ## Development
 
 1. Start the backend server:
+
    ```bash
    cd backend
    npm run dev
    ```
+
    The server will run on http://localhost:3000
 
 2. Start the frontend server:
@@ -81,10 +83,13 @@ The project consists of two main parts:
 ## Screenshots
 
 #### Landing page
+
 <img src="screenshots/landing-page.PNG" alt="landing-page" height="auto"/>
 
 #### Analysis form filled with mock-data
+
 <img src="screenshots/filled-form.PNG" alt="filled-form" height="auto"/>
 
 #### Analysis result for mock-data
-<img src="screenshots/result.PNG" alt="result" height="auto"/>
+
+<img src="screenshots/analysis-result.PNG" alt="analysis-result" height="auto"/>
