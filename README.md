@@ -85,3 +85,6 @@ The project consists of two main parts:
 
 #### Analysis form filled with mock-data
 <img src="screenshots/filled-form.PNG" alt="filled-form" height="auto"/>
+
+#### Analysis result for mock-data
+<img src="screenshots/result.PNG" alt="result" height="auto"/>

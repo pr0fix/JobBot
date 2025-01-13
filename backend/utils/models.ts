@@ -2,4 +2,5 @@
 export const llama3 = "llama3:8b";
 export const qwen = "qwen2.5:32b";
 export const phi3 = "phi3:14b";
+export const phi4 = "phi4:latest";
 export const wizardlm2 = "wizardlm2";

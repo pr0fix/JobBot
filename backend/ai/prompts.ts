@@ -20,7 +20,7 @@ export const createPrompt = (
   Format:
   - Return only the revised application text.
   - Preserve the original structure with no extra formatting changes.
-
+  - Divide the text into paragraphs of maximum five lines each
   Output only the revised text using actual details from the original application.
 `;
 

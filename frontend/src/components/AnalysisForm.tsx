@@ -72,6 +72,7 @@ const AnalysisForm = ({ formData, setFormData }: AnalysisFormProps) => {
               }))
             }
             required
+            spellCheck={false}
           />
         </div>
         <div className="w-full mt-4">
